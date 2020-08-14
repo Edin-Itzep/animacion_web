@@ -42,14 +42,23 @@
         /*  animation-delay: 1s; cada cuanto   */
         /*animation-iteration-count: 2;  decirle cuantas veces lo hara */
        animation-iteration-count: infinite; 
+       
        animation-timing-function: ease;
-      /*  animation-timing-function: ease-in;
+       /* ease o modifica velocidad, se encuentra en normal */
+       animation-timing-function: ease-in;
+       /* este modifica la velocidad al inicio del elemento */
        animation-timing-function: ease-out;
+       /* este mdifica la velocidad al finalizr el elemento */
        animation-timing-function: ease-in-out;
+       /* empieza rapido luego lento, rapdio y lento */
        animation-timing-function: linear;
+       /* la velocidad del elemento a mover es mas mecanico */
+       animation-timing-function: steps(10);
+       /* aqui nos indica que podemos mover la aplicacion por pasos y se ve los saltos reflejados */
        animation-timing-function: cubic-bezier(1,1,1,1);
 
- */
+
+ 
         /*animation-direction: reverse; /*el contrario de la animacion */
         /*animation-direction: alternate; que empiece de visible a invisible y leugo al reves */
         animation-direction: alternate;
