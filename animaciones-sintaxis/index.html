@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto de Origen</title>
+    <style>
+
+        body {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial;
+
+        }
+
+
+    .container {
+        border: 1px solid red;
+        width: 100%;
+    }
+
+
+    .container:hover .cuadrado {
+       animation-play-state: paused;
+    }
+    .cuadrado{
+        width: 200px;
+        height: 200px;
+        background: #7dc900;
+        margin: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* transition: .3s; */
+        animation-name: cuadrado; /* nombre de animacion */
+        animation-duration: 2s; /* cuanto va a durar */
+        /*  animation-delay: 1s; cada cuanto   */
+        /*animation-iteration-count: 2;  decirle cuantas veces lo hara */
+       animation-iteration-count: infinite; 
+       animation-timing-function: ease;
+      /*  animation-timing-function: ease-in;
+       animation-timing-function: ease-out;
+       animation-timing-function: ease-in-out;
+       animation-timing-function: linear;
+       animation-timing-function: cubic-bezier(1,1,1,1);
+
+ */
+        /*animation-direction: reverse; /*el contrario de la animacion */
+        /*animation-direction: alternate; que empiece de visible a invisible y leugo al reves */
+        animation-direction: alternate;
+
+        animation-fill-mode: forwards; /* valor final de mi animacion cuando esto se ejecute */
+        /* aparte le decimos que la animacion termine con el valor final de transparencia */
+       /*  animation-play-state: running;
+        animation-play-state: paused; el paused funcionaria en mi elemento o al hacer hover */
+        position: relative;
+    }
+    @keyframes cuadrado {
+
+        0%{
+          /* opacity: 1;  */ 
+          left: 0;
+        }
+
+        100%{
+            /* opacity: 0; */
+            left: calc(100% - 240px);
+
+            /* para lograr que la pelota rebote 
+            podemos designrselo a la propiedad alternate
+            animation-direction: alternate;*/
+        }
+    }
+
+
+
+    
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+
+        
+        <div class="cuadrado">Hola Mundo
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
